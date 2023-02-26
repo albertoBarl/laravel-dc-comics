@@ -53,8 +53,12 @@ class ComicsController extends Controller
     public function show($id)
     {
         $comic = Comic::findOrFail($id);
+        $sections = config("comics.sections");
+        $socials = config("comics.socials");
+        $menu = config("comics.menu");
+        $footcard = config('comics.foothead');
 
-        return view("comics.show", compact("comic"));
+        return view("comics.show", compact("comic", "sections", "socials", "menu", "footcard"));
     }
 
     /**

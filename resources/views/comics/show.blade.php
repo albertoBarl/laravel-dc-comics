@@ -6,7 +6,7 @@
         {{-- section 1 --}}
         <div id="sect1">
             <div class="container">
-                <img class="card" src="{{ $singleCard['thumb'] }} " style="width: 200px">
+                <img class="card" src="{{ $comic['thumb'] }} " style="width: 200px">
             </div>
         </div>
 
@@ -18,12 +18,12 @@
                     {{-- description --}}
                     <div class="col-7">
                         {{-- title --}}
-                        <h3 class="text-uppercase">{{ $singleCard['title'] }}</h3>
+                        <h3 class="text-uppercase">{{ $comic['title'] }}</h3>
 
                         {{-- price --}}
                         <div class="form-control d-flex justify-content-between my-3">
                             <div class="tprice d-flex justify-content-between align-items-center w-100 px-3">
-                                <span>U.S. Price: <span class="text-white">{{ $singleCard['price'] }}</span></span>
+                                <span>U.S. Price: <span class="text-white">{{ $comic['price'] }}</span></span>
                                 <span>AVAILABLE</span>
                             </div>
                             <div class="dropdown">
@@ -40,7 +40,7 @@
                         </div>
 
                         {{-- description --}}
-                        <p>{{ $singleCard['description'] }}</p>
+                        <p>{{ $comic['description'] }}</p>
                     </div>
 
                     {{-- adv --}}
@@ -67,13 +67,13 @@
                                 <tr>
                                     <th scope="row">Art by:</th>
                                     <td>
-                                        <a href="/">{{ $singleCard['artists'] }}</a>
+                                        <a href="/">{{ $comic['artists'] }}</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Written by:</th>
                                     <td>
-                                        <a href="/">{{ $singleCard['writers'] }}</a>
+                                        <a href="/">{{ $comic['writers'] }}</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -86,15 +86,15 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">Series:</th>
-                                    <td class="text-uppercase"><a href="/">{{ $singleCard['series'] }}</a></td>
+                                    <td class="text-uppercase"><a href="/">{{ $comic['series'] }}</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">U.S. Price:</th>
-                                    <td>{{ $singleCard['price'] }}</td>
+                                    <td>{{ $comic['price'] }}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">On Sales Date:</th>
-                                    <td>{{ $singleCard['sale_date'] }}</td>
+                                    <td>{{ $comic['sale_date'] }}</td>
                                 </tr>
                             </tbody>
                         </table>
