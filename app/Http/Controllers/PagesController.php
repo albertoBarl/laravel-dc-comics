@@ -14,10 +14,8 @@ class PagesController extends Controller
     public function index()
     {
         $sections = config("comics.sections");
-        $socials = config("comics.socials");
-        $menu = config("comics.menu");
         $footcard = config('comics.foothead');
-        return view("sections.benvenuto", compact("sections", "socials", "menu", "footcard"));
+        return view("sections.benvenuto", compact("sections", "footcard"));
     }
 
     /**

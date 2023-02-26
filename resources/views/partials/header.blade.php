@@ -30,9 +30,16 @@
             {{-- menu --}}
             <div id="nav">
                 <ul class="d-flex list-unstyled gap-3">
-                    @foreach ($menu as $item)
-                        <li><a class="text-black" href="{{ $item['url'] }}">{{ $item['voice'] }}</a></li>
-                    @endforeach
+                    <li><a class="text-black" href="/">CHARACTERS</a></li>
+                    <li><a class="text-black" href="/">COMICS</a></li>
+                    <li><a class="text-black" href="/">MOVIES</a></li>
+                    <li><a class="text-black" href="/">TV</a></li>
+                    <li><a class="text-black" href="/">GAMES</a></li>
+                    <li><a class="text-black" href="/">COLLECTIBLES</a></li>
+                    <li><a class="text-black" href="/">VIDEOS</a></li>
+                    <li><a class="text-black" href="/">FANS</a></li>
+                    <li><a class="text-black" href="/">NEWS</a></li>
+                    <li><a class="text-black" href="/">SHOP</a></li>
                 </ul>
             </div>
 

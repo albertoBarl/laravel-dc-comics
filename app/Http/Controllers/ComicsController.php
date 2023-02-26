@@ -17,10 +17,8 @@ class ComicsController extends Controller
     {
         $comics = Comic::All();
         $sections = config("comics.sections");
-        $socials = config("comics.socials");
-        $menu = config("comics.menu");
         $footcard = config('comics.foothead');
-        return view("comics.index", compact("comics", "sections", "socials", "menu", "footcard"));
+        return view("comics.index", compact("comics", "sections", "footcard"));
     }
 
     /**
@@ -31,10 +29,8 @@ class ComicsController extends Controller
     public function create()
     {
         $sections = config("comics.sections");
-        $socials = config("comics.socials");
-        $menu = config("comics.menu");
         $footcard = config('comics.foothead');
-        return view("comics.create", compact("sections", "socials", "menu", "footcard"));
+        return view("comics.create", compact("sections", "footcard"));
     }
 
     /**
@@ -71,11 +67,9 @@ class ComicsController extends Controller
     {
         $comic = Comic::findOrFail($id);
         $sections = config("comics.sections");
-        $socials = config("comics.socials");
-        $menu = config("comics.menu");
         $footcard = config('comics.foothead');
 
-        return view("comics.show", compact("comic", "sections", "socials", "menu", "footcard"));
+        return view("comics.show", compact("comic", "sections", "footcard"));
     }
 
     /**
@@ -87,10 +81,8 @@ class ComicsController extends Controller
     public function edit(Comic $comic)
     {
         $sections = config("comics.sections");
-        $socials = config("comics.socials");
-        $menu = config("comics.menu");
         $footcard = config('comics.foothead');
-        return view("comics.edit", compact("comic", "sections", "socials", "menu", "footcard"));
+        return view("comics.edit", compact("comic", "sections",  "footcard"));
     }
 
     /**

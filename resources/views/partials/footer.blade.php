@@ -33,13 +33,26 @@
             <div class="d-flex align-items-center justify-content-end gap-3">
                 <label>FOLLOW US</label>
                 <div class="d-flex align-items-center gap-2">
-                    @foreach ($socials as $item)
-                        <a href="/">
-                            <div><img src="{{ Vite::asset("resources/images/{$item['logo']}") }}"
-                                    alt="{{ $item['name'] }}">
-                            </div>
-                        </a>
-                    @endforeach
+                    <a href="/">
+                        <div><img src="{{ Vite::asset('resources/images/footer-facebook.png') }}" alt="FB">
+                        </div>
+                    </a>
+                    <a href="/">
+                        <div><img src="{{ Vite::asset('resources/images/footer-twitter.png') }}" alt="TW">
+                        </div>
+                    </a>
+                    <a href="/">
+                        <div><img src="{{ Vite::asset('resources/images/footer-youtube.png') }}" alt="YT">
+                        </div>
+                    </a>
+                    <a href="/">
+                        <div><img src="{{ Vite::asset('resources/images/footer-pinterest.png') }}" alt="PI">
+                        </div>
+                    </a>
+                    <a href="/">
+                        <div><img src="{{ Vite::asset('resources/images/footer-periscope.png') }}" alt="PE">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
