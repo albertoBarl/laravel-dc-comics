@@ -10,7 +10,12 @@
                 <div>
                     <a href="{{ route('comics.create') }}" class="btn btn-primary">ADD</a>
                     <a class="btn btn-warning">EDIT</a>
-                    <a class="btn btn-danger">DELETE</a>
+                    <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">DELETE</button>
+
+                    </form>
                 </div>
             </div>
         </div>
