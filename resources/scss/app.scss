@@ -1,0 +1,171 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./partials/mixins";
+@import "./partials/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+#full-header {
+    #pre-header {
+        background-color: $dc-color;
+        height: 33.3px;
+        padding-top: 3.3px;
+    }
+
+    #header {
+        nav {
+            #nav {
+                li {
+                    &:hover {
+                        border-bottom: 3px solid $dc-color;
+                    }
+                }
+            }
+
+            #searchbar {
+                .form-control {
+                    border-top: 0px;
+                    border-left: 0px;
+                    border-right: 0px;
+                    border-bottom: solid $dc-color;
+                    border-radius: 0px;
+                    input {
+                        text-align: end;
+                    }
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.jumbotron img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+}
+
+#comiclist {
+    background-color: $dark-color;
+    padding: 75px 0px;
+    position: relative;
+    section {
+        position: absolute;
+        top: -4%;
+        left: 10%;
+        background-color: $dc-color;
+        color: white;
+        padding: 15px;
+        text-transform: uppercase;
+    }
+    button {
+        background-color: $dc-color;
+        border-radius: 0;
+        color: white;
+        padding: 5px;
+        text-transform: uppercase;
+    }
+}
+.footcards {
+    background-color: $dc-color;
+}
+
+#singleCard {
+    position: relative;
+    #sect1 {
+        height: 100px;
+        background-color: $dc-color;
+        div {
+            img {
+                border-radius: 0;
+                position: absolute;
+                top: -225px;
+            }
+        }
+    }
+    #sect2 {
+        background-color: white;
+        padding: 50px;
+
+        .col-7 {
+            .form-control {
+                background-color: #55ba59;
+                border-radius: 0;
+                .tprice {
+                    border-right: 1px solid black;
+                    span {
+                        color: #abf494;
+                    }
+                }
+            }
+        }
+
+        .col-4 {
+            text-align: end;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #sect3 {
+        background-color: #f6f6f6;
+
+        .feet {
+            border-top: 1px solid grey;
+            a {
+                width: max-content;
+                padding: 15px 10px;
+                border-left: 1px solid grey;
+                &:last-child {
+                    border-right: 1px solid grey;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    #voices {
+        background-color: $dark-color;
+        background-image: url("../images/footer-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        .container {
+            background-image: url("../images/dc-logo-bg.png");
+            background-repeat: no-repeat;
+            background-position: right;
+            height: 433px;
+            padding: 25px 0px;
+            .voicesSect {
+                height: 90%;
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                h4 {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    #deepfooter {
+        background-color: $dark-color;
+        .btn {
+            color: white;
+            border-color: $dc-color;
+            border-radius: 0px;
+        }
+        label {
+            color: $dc-color;
+        }
+    }
+}
