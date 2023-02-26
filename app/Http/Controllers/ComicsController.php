@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
-class PagesController extends Controller
+
+class ComicsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,11 +15,12 @@ class PagesController extends Controller
      */
     public function index()
     {
+        $comics = Comic::All();
         $sections = config("comics.sections");
         $socials = config("comics.socials");
         $menu = config("comics.menu");
         $footcard = config('comics.foothead');
-        return view("sections.benvenuto", compact("sections", "socials", "menu", "footcard"));
+        return view("comics.index", compact("comics", "sections", "socials", "menu", "footcard"));
     }
 
     /**
@@ -49,7 +52,9 @@ class PagesController extends Controller
      */
     public function show($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+
+        return view("comics.show", compact("comic"));
     }
 
     /**
