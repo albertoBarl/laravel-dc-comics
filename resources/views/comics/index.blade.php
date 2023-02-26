@@ -1,23 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="comiclist">
+    <div id="comiclist" class="d-flex justify-content-center flex-column align-items-center">
         <div class="container d-flex justify-content-center flex-wrap gap-5">
             <section>
                 <h3>current series</h3>
             </section>
             @foreach ($comics as $card)
                 <a href="{{ route('comics.show', ['comic' => $card->id]) }}" class="text-white">
-                    <div class="card bg-transparent border-0" style="width: 175px">
+                    <div class="card bg-transparent border-0" style="width: 200px">
                         <img src="{{ $card['thumb'] }}" class="card-img-top" alt="{{ $card['title'] }}">
                         <p class="card-title text-uppercase">{{ $card['title'] }}</p>
                     </div>
                 </a>
             @endforeach
-            <button class="btn px-5">
-                load more
-            </button>
         </div>
+        <button class="btn px-5">
+            load more
+        </button>
 
     </div>
 
