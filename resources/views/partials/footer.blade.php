@@ -30,6 +30,8 @@
             <div>
                 <button class="btn">SIGN-UP NOW!</button>
             </div>
+
+            {{-- SOCIALS --}}
             <div class="d-flex align-items-center justify-content-end gap-3">
                 <label>FOLLOW US</label>
                 <div class="d-flex align-items-center gap-2">

@@ -5,21 +5,23 @@
 
         {{-- section 1 --}}
         <div id="sect1">
+
             <div class="container">
                 <img class="card" src="{{ $comic['thumb'] }} " style="width: 200px">
-                <div>
-                    <a href="{{ route('comics.create') }}" class="btn btn-primary">ADD</a>
-                    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning">EDIT</a>
-                    <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">DELETE</button>
 
-                    </form>
-                </div>
             </div>
-        </div>
 
+        </div>
+        <div class="container d-flex justify-content-end align-items-center p-1 rounded-3 gap-2">
+            <a href="{{ route('comics.create') }}" class="btn btn-primary">ADD</a>
+            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning">EDIT</a>
+            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">DELETE</button>
+
+            </form>
+        </div>
         {{-- section 2 --}}
         <div id="sect2">
             <div class="container d-flex justify-content-center">
