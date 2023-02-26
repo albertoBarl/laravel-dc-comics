@@ -6,31 +6,31 @@
             @csrf
             <div class="mb-3">
                 <label for="" class="form-label">Title</label>
-                <input type="text" class="form-control" id="" aria-describedby="" name="title">
+                <input type="text" class="form-control" name="title">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Description</label>
-                <textarea rows="5" class="form-control" id="" aria-describedby="" name="description"></textarea>
+                <textarea rows="5" class="form-control" name="description"></textarea>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Price</label>
-                <input type="text" class="form-control" id="" aria-describedby="" name="price">
+                <input type="text" class="form-control" name="price">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Series</label>
-                <input type="text" class="form-control" id="" aria-describedby="" name="series">
+                <input type="text" class="form-control" name="series">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Sales date</label>
-                <input type="text" class="form-control" id="" aria-describedby="" name="sale_date">
+                <input type="text" class="form-control" name="sale_date">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Type</label>
-                <input type="text" class="form-control" id="" aria-describedby="" name="type">
+                <input type="text" class="form-control" name="type">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Add image</label>
-                <input type="text" class="form-control" id="" aria-describedby="" name="thumb">
+                <input type="text" class="form-control" name="thumb">
             </div>
             <div class="form-group">
 

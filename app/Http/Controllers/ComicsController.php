@@ -84,9 +84,13 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        $sections = config("comics.sections");
+        $socials = config("comics.socials");
+        $menu = config("comics.menu");
+        $footcard = config('comics.foothead');
+        return view("comics.edit", compact("comic", "sections", "socials", "menu", "footcard"));
     }
 
     /**
@@ -96,9 +100,11 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        $comic->update($form_data);
+        return redirect()->route("comics.show", $comic->id);
     }
 
     /**

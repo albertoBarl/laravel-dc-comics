@@ -9,7 +9,7 @@
                 <img class="card" src="{{ $comic['thumb'] }} " style="width: 200px">
                 <div>
                     <a href="{{ route('comics.create') }}" class="btn btn-primary">ADD</a>
-                    <a class="btn btn-warning">EDIT</a>
+                    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning">EDIT</a>
                     <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
                         @csrf
                         @method('DELETE')
