@@ -7,7 +7,7 @@
                 <h3>current series</h3>
             </section>
             @foreach ($comics as $card)
-                <a href="{{ route('comics.show', ['comic' => $card->id]) }}" class="text-white">
+                <a href="{{ route('comics.show', $card->id) }}" class="text-white">
                     <div class="card bg-transparent border-0" style="width: 200px">
                         <img src="{{ $card['thumb'] }}" class="card-img-top" alt="{{ $card['title'] }}">
                         <p class="card-title text-uppercase">{{ $card['title'] }}</p>

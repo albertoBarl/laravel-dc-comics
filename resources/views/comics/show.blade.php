@@ -35,7 +35,7 @@
                         {{-- price --}}
                         <div class="form-control d-flex justify-content-between my-3">
                             <div class="tprice d-flex justify-content-between align-items-center w-100 px-3">
-                                <span>U.S. Price: <span class="text-white">{{ $comic['price'] }}</span></span>
+                                <span>U.S. Price: <span class="text-white">${{ $comic['price'] }}</span></span>
                                 <span>AVAILABLE</span>
                             </div>
                             <div class="dropdown">
@@ -102,7 +102,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">U.S. Price:</th>
-                                    <td>{{ $comic['price'] }}</td>
+                                    <td>${{ $comic['price'] }}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">On Sales Date:</th>

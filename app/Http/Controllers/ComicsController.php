@@ -68,7 +68,6 @@ class ComicsController extends Controller
      */
     public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($comic->id);
         $sections = config("comics.sections");
         $footcard = config('comics.foothead');
 
@@ -97,6 +96,15 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        // VALIDATION
+        // $request->validate([
+        //     "title" => "required|max:100",
+        //     "price" => "required|max:16",
+        //     "series" => "required|max:50",
+        //     "sale_date" => "required|date_format:Y-m-d",
+        //     "type" => "required|max:30",
+        // ]);
+
         $form_data = $request->all();
         $comic->update($form_data);
         return redirect()->route("comics.show", $comic->id);

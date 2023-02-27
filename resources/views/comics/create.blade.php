@@ -22,7 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Sales date</label>
-                <input type="text" class="form-control" name="sale_date">
+                <input type="date" class="form-control" name="sale_date">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Type</label>
