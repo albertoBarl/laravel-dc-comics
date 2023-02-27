@@ -34,6 +34,14 @@
                 <label for="thumb" class="form-label">Add image</label>
                 <input type="text" class="form-control" value="{{ $comic->thumb }}" name="thumb">
             </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Artists</label>
+                <input type="text" class="form-control" value="{{ $comic->artists }}" name="artists">
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Writers</label>
+                <input type="text" class="form-control" value="{{ $comic->writers }}" name="writers">
+            </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Aggiorna il Comics</button>
             </div>

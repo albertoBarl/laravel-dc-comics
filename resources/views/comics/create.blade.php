@@ -32,6 +32,14 @@
                 <label for="" class="form-label">Add image</label>
                 <input type="text" class="form-control" name="thumb">
             </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Artists</label>
+                <input type="text" class="form-control" name="artists">
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Writers</label>
+                <input type="text" class="form-control" name="writers">
+            </div>
             <div class="form-group">
 
                 <button type="submit" class="btn btn-primary">Crea il nuovo Comics</button>
