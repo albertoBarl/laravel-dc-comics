@@ -44,14 +44,17 @@ class ComicsController extends Controller
         $form_data = $request->all();
 
         $new_comic = new Comic();
-        $new_comic->title = $form_data['title'];
-        $new_comic->description = $form_data['description'];
-        $new_comic->thumb = $form_data['thumb'];
-        $new_comic->price = $form_data['price'];
-        $new_comic->series = $form_data['series'];
-        $new_comic->sale_date = $form_data['sale_date'];
-        $new_comic->type = $form_data['type'];
+        // PRIMO METODO
+        // $new_comic->title = $form_data['title'];
+        // $new_comic->description = $form_data['description'];
+        // $new_comic->thumb = $form_data['thumb'];
+        // $new_comic->price = $form_data['price'];
+        // $new_comic->series = $form_data['series'];
+        // $new_comic->sale_date = $form_data['sale_date'];
+        // $new_comic->type = $form_data['type'];
 
+        // SECONDO METODO, ABBREVIATO
+        $new_comic->fill($form_data);
         $new_comic->save();
 
         return redirect()->route("comics.index");
@@ -63,9 +66,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
+        $comic = Comic::findOrFail($comic->id);
         $sections = config("comics.sections");
         $footcard = config('comics.foothead');
 
